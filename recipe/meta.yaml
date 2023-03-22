@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/googledrive_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/googledrive/googledrive_{{ version }}.tar.gz
-  sha256: 605c469a6a086ef4b049909c2e20a35411c165ce7ce4f62d68fd39ffed8c5a26
+  sha256: 0d70353bbf1bebc96d3987ebd9cbb2b0902e6ddc4cdccece3d07c2bb688c4b74
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/

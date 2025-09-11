@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/googledrive_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/googledrive/googledrive_{{ version }}.tar.gz
-  sha256: 0b8b4f74ba3630b0347249a32a80bc5fc2e8b63ad2952702f30162bd2d38fb82
+  sha256: 3809ea4d8333eb80e6ca4e780f198014f65b21c3cf4ec95a63aeb6772c8d94aa
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/

@@ -12,7 +12,7 @@ source:
   sha256: 3809ea4d8333eb80e6ca4e780f198014f65b21c3cf4ec95a63aeb6772c8d94aa
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -21,30 +21,39 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-curl >=2.8.1
-    - r-gargle >=0.3.1
-    - r-glue >=1.2.0
+    - r-cli >=3.0.0
+    - r-gargle >=1.6.0
+    - r-glue >=1.4.2
     - r-httr
     - r-jsonlite
+    - r-lifecycle
     - r-magrittr
-    - r-purrr >=0.2.3
-    - r-rlang >=0.3.1
+    - r-pillar >=1.9.0
+    - r-purrr >=1.0.1
+    - r-rlang >=1.0.2
     - r-tibble >=2.0.0
     - r-uuid
+    - r-vctrs >=0.3.0
+    - r-withr
   run:
     - r-base
-    - r-curl >=2.8.1
-    - r-gargle >=0.3.1
-    - r-glue >=1.2.0
+    - r-cli >=3.0.0
+    - r-gargle >=1.6.0
+    - r-glue >=1.4.2
     - r-httr
     - r-jsonlite
+    - r-lifecycle
     - r-magrittr
-    - r-purrr >=0.2.3
-    - r-rlang >=0.3.1
+    - r-pillar >=1.9.0
+    - r-purrr >=1.0.1
+    - r-rlang >=1.0.2
     - r-tibble >=2.0.0
     - r-uuid
+    - r-vctrs >=0.3.0
+    - r-withr
 
 test:
   commands:
